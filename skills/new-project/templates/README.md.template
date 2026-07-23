@@ -1,0 +1,29 @@
+# {{name}}
+
+{{one-line description}}
+
+## What it does
+
+{{purpose paragraph - what it is, who it is for, what problem it solves}}
+
+## Setup
+
+```
+{{clone + install commands, e.g. "uv sync" or "npm ci"}}
+```
+
+## Usage
+
+```
+{{primary run command and an example}}
+```
+
+## Development
+
+```
+{{test command with coverage, lint command}}
+```
+
+## Status
+
+{{current state - what works, what is planned}}

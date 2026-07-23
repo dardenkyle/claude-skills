@@ -1,0 +1,26 @@
+# {{name}}
+
+{{one-paragraph overview: what this project is and its architecture at a
+glance}}
+
+## Commands
+
+- Setup: `{{install command}}`
+- Test: `{{test command with coverage}}`
+- Lint: `{{lint command}}`
+- Run: `{{run command}}`
+
+## Structure
+
+{{top-level directory map with one line per entry}}
+
+## Conventions
+
+- {{project-specific conventions only - cross-project rules are loaded
+  globally from ~/Code/claude-context/PREFERENCES.md; do not restate
+  them here}}
+
+## Cautions
+
+- {{anything dangerous or surprising: production credentials, external
+  rate limits, deploy triggers. Delete the section if none.}}
