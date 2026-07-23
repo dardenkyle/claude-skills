@@ -1,0 +1,10 @@
+# Whitelist strategy: ignore everything by default, then re-allow the
+# files this repo actually manages. New content must be added here
+# explicitly before git will see it.
+*
+!*/
+!.gitignore
+!README.md
+!setup.sh
+!skills/**
+!dotfiles/**
