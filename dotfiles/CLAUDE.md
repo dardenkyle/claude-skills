@@ -120,12 +120,17 @@ No method comment blocks in the `.h` file — declarations only. Method comment 
 - No 1–2 line functions, except getters/setters.
 - Functions must **not print** unless printing is their sole purpose.
 - No `exit()`, `abort()`, or `quit()` anywhere except possibly the very end of `main()`.
+- Prototypes do not name parameters (C/C++): types only, e.g.
+  `int add(int, int);`. Names appear only in the definition.
 
 ## Loops
 
 - No `break` or `continue`.
 - No function calls in loop headers.
-- No variable declarations inside loops (C/C++).
+- No variable declarations inside loop **bodies** (C/C++). Loop **control**
+  variables are the opposite case: declare them in the `for` header -
+  `for (int i = 0; i < 10; i++)`, never `int i; for (i = 0; ...)` - unless
+  the value is needed after the loop terminates.
 - Avoid `if` statements inside loops when possible.
 - Use `for` when iteration count is known; `while` when unknown.
 - No purposeful infinite loops.
