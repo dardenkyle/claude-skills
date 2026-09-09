@@ -34,6 +34,11 @@ encodes procedure, not rules.
 - Run the project's test suite with coverage (Python: `uv run pytest
   --cov`; Node: `npm ci` then the repo's test script) and capture the
   total coverage percentage.
+- Python projects: also run mypy. Use the exact invocation from the
+  repo's CI workflow (`grep -n mypy .github/workflows/*.yml`) so local
+  flags and target paths match the gate; if CI defines none, run
+  `uv run mypy <package>`. Type errors block shipping exactly like
+  failing tests - the suite does not catch them.
 - Failing tests block shipping: fix them or report and stop. Fix lint and
   flakiness encountered along the way.
 
