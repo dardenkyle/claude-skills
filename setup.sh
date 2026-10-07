@@ -45,9 +45,14 @@ link "$REPO_DIR/dotfiles/settings.json" "$CLAUDE_DIR/settings.json"
 if [ ! -d "$HOME/Code/claude-context" ]; then
     warn "~/Code/claude-context is not cloned; CLAUDE.md imports will not resolve"
 fi
-for cmd in gh gh-axi chrome-devtools-axi lavish-axi jq; do
+for cmd in gh jq; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
-        warn "$cmd not found on PATH"
+        warn "$cmd not found on PATH (required: skills use gh, the status line uses jq)"
+    fi
+done
+for cmd in lavish-axi gh-axi chrome-devtools-axi; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        warn "$cmd not found on PATH (optional: lavish-axi renders the design-review report; gh-axi and chrome-devtools-axi are registered by SessionStart hooks and skipped when absent)"
     fi
 done
 

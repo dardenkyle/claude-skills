@@ -29,6 +29,9 @@ to every subagent.
   and say which.
 - Skip anything a linter or formatter catches. Run the project's configured
   linters and type checkers read-only and treat their output as context.
+- Tooling: the report in Phase 4 needs `lavish-axi`. `gh-axi` is used for
+  run, issue, and label lookups; plain `gh` commands are an acceptable
+  substitute when it is not installed.
 
 ## 1. Scope and reconnaissance
 

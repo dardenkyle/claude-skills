@@ -1,6 +1,6 @@
 ---
 name: ship
-description: Take finished work on the current branch through verify, commit, push, and PR, then stop. Use when the user says "ship", "ship it", "/ship", "open a PR for this", or "commit and push this work". Not for starting new work (that is /start-work) and not a substitute for the /no-mistakes validation pipeline.
+description: Take finished work on the current branch through verify, commit, push, and PR, then stop. Use when the user says "ship", "ship it", "/ship", "open a PR for this", or "commit and push this work". Not for starting new work (that is /start-work).
 ---
 
 # Ship
@@ -57,8 +57,10 @@ encodes procedure, not rules.
 - Open the PR with `gh pr create`, report the URL, and stop. At most one
   CI status check; no polling loops.
 
-## Relationship to /no-mistakes
+## Heavier validation
 
-/no-mistakes is the heavier pipeline (automated code review, lint, docs,
-CI gating). Ship does not duplicate it. If the change is risky or the user
-asks for full validation, suggest /no-mistakes instead of extending ship.
+Ship is the minimum gate. If a fuller validation pipeline is installed in
+this environment (for example a no-mistakes style skill that adds
+automated code review, docs checks, and CI gating), suggest it for risky
+changes or when the user asks for full validation, instead of extending
+ship. Ship does not depend on one being present.
