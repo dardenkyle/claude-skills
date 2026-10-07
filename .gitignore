@@ -6,5 +6,6 @@
 !.gitignore
 !README.md
 !setup.sh
+!bin/**
 !skills/**
 !dotfiles/**

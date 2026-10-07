@@ -31,6 +31,16 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/Code/claude-skills/bin/repo-drift.sh\"",
+            "timeout": 10
+          }
+        ]
       }
     ]
   },

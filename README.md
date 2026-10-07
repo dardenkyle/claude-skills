@@ -69,6 +69,7 @@ Two review skills sit beside that loop:
 
 ```
 setup.sh           idempotent installer (symlinks skills and dotfiles)
+bin/repo-drift.sh  SessionStart hook: reports uncommitted or unpushed config repos
 skills/            one directory per skill, linked into ~/.claude/skills/
 dotfiles/
   CLAUDE.md        global CLAUDE.md, linked to ~/.claude/CLAUDE.md
